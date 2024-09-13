@@ -4,12 +4,12 @@
 	{
 		static void Main(string[] args)
 		{
-			var numberFilter = new NumberFilter();
+			var testClass = new MyClass();
 			var numbers = new List<int> { 5, 3, 8, 6, 2, 9, 4, 7, 1, 10 };
 
-			var sortedEvenNumbers = numberFilter.FilterAndSortEvenNumbers(numbers);
+			var result = testClass.MyMethod(numbers);
 
-			Console.WriteLine("Sorted Even Numbers: " + string.Join(", ", sortedEvenNumbers));
+			Console.WriteLine("Numbers: " + string.Join(", ", result));
 		}
 	}
 }
