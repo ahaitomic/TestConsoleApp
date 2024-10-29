@@ -3,7 +3,7 @@ public class Order
 {
 	public int Id { get; set; }
 	public string CustomerName { get; set; }
-	public List<OrderItem> Items { get; set; }
+	public Dictionary<int, OrderItem> Items { get; set; }
 	public double TotalAmount { get; set; }
 
 	public double CalculateTotalAmount()
@@ -11,7 +11,7 @@ public class Order
 		double total = 0;
 		foreach (var item in Items)
 		{
-			total += item.Price * item.Quantity;
+			total += item.Value.Price * item.Value.Quantity;
 		}
 		return total;
 	}
